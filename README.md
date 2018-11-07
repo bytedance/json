@@ -1,7 +1,10 @@
 # json
-Json standard package extension library
 
-- In the case of a non-cyclic combination, using zero value('[]' or '{}') instead of null.
+Json standard package extension library.
+
+## Extension feature
+
+1. In the case of a non-cyclic combination, using zero value('[]' or '{}') instead of null.
 
 ```go
 func ExampleMarshalNotnull() {
