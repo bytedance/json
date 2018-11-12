@@ -303,7 +303,7 @@ func (e *encodeState) marshal(v interface{}, opts encOpts) (err error) {
 		}
 	}()
 	val := reflect.ValueOf(v)
-	if opts.notnull && val.IsNil() {
+	if opts.notnull && val.Kind() == reflect.Ptr && val.IsNil() {
 		t := reflect.TypeOf(v)
 		for t.Kind() == reflect.Ptr {
 			t = t.Elem()
