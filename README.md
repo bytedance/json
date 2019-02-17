@@ -1,6 +1,6 @@
 # json
 
-Json standard package extension library.
+JSON standard package extension library.
 
 ## Extension feature
 
