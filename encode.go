@@ -157,7 +157,7 @@ import (
 func Marshal(v interface{}) ([]byte, error) {
 	e := newEncodeState()
 
-	err := e.marshal(v, encOpts{escapeHTML: true})
+	err := e.marshal(v, encOpts{escapeHTML: true, notnull: defalutNotnull})
 	if err != nil {
 		return nil, err
 	}

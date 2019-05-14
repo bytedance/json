@@ -185,7 +185,7 @@ type Encoder struct {
 
 // NewEncoder returns a new encoder that writes to w.
 func NewEncoder(w io.Writer) *Encoder {
-	return &Encoder{w: w, escapeHTML: true}
+	return &Encoder{w: w, escapeHTML: true, notnull: defalutNotnull}
 }
 
 // Encode writes the JSON encoding of v to the stream,

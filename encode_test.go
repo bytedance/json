@@ -56,6 +56,8 @@ var optionalsExpected = `{
 }`
 
 func TestOmitEmpty(t *testing.T) {
+	defalutNotnull = false
+
 	var o Optionals
 	o.Sw = "something"
 	o.Mr = map[string]interface{}{}

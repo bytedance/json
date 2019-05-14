@@ -869,6 +869,8 @@ var unmarshalTests = []unmarshalTest{
 }
 
 func TestMarshal(t *testing.T) {
+	defalutNotnull = false
+
 	b, err := Marshal(allValue)
 	if err != nil {
 		t.Fatalf("Marshal allValue: %v", err)

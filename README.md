@@ -11,13 +11,7 @@ func ExampleMarshalNotnull() {
 	var a *A
 	b, _ := json.Marshal(a)
 	fmt.Println(string(b))
-	var buf bytes.Buffer
-	enc := json.NewEncoder(&buf)
-	enc.SetNotnull(true)
-	enc.Encode(a)
-	fmt.Println(buf.String())
 	// Output:
-	// null
 	// {"List":[],"Map":{},"Children":[],"B":{"ListB":null,"MapB":null,"A":null,"B":null},"MapPtr":{}}
 }
 
